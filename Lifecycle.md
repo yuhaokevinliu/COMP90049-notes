@@ -17,3 +17,7 @@
 
 - This leads to
 [Decision Tree](DecisionTree.md)
+
+
+### Supervised lifecycle
+![Supervised](assets\supervised_life.png)

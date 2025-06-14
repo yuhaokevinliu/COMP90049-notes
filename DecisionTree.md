@@ -64,3 +64,22 @@
 
 ### Other
 - [Random Forest](Random_Forest.md)
+
+### Summary Questions
+- Describe the basic decision tree induction method used in ID3
+- What is information gain, how is it calculated and what is its
+primary shortcoming?
+- What is gain ratio, and how does it attempt to overcome the
+shortcoming of information gain?
+- What are the theoretical and practical properties of ID3-style
+decision trees?
+
+
+### Evaluation
+### Depth of Decision Tree
+- As our dataset grows, their decision tree will also grow
+- The problem with such a big Tree is that it does NOT generalize well
+- We need a way to optimize the complexity of our model
+- Depth: a hyperparameter for DT
+
+[Back to Evaluation](Evaluation.md)

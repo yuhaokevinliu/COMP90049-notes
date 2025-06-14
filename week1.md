@@ -161,8 +161,8 @@
     - Mode
     - Pro: easy to compute, no loss for record
     - Con: biased other stats measures:
-    -       Variance
-    -       Standard Deviation
+    - Variance
+    - Standard Deviation
 
 ### Inaccurate Values
 - Typographical errors
