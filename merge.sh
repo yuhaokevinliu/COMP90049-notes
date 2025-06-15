@@ -18,7 +18,7 @@ for file in \
     Regression.md \
     SVM.md \
     Evaluation.md \
-
+    
 
 do
     echo "---" >> $output

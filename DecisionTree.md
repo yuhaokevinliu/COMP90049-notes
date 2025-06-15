@@ -63,7 +63,7 @@
     - Information gain: Bias for attribute with greater no. of values
 
 ### Other
-- [Random Forest](Random_Forest.md)
+- [Random Forest](Ensemble.md#bagging---random-forest)
 
 ### Summary Questions
 - Describe the basic decision tree induction method used in ID3
