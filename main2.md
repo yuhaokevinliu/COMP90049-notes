@@ -1,24 +1,24 @@
 
 # 📚 Machine Learning Notes – Table of Contents
 
-- [Week 1](#week1)--1
-- [Lifecycle](#lifecycle)--6
-- [K-NN](#k-nn)--7
-- [Probs](#probs)--10
-- [Naive Bayes](#naive_bayes)--13
-- [Decision Tree](#decisiontree)--15
-- [Regression](#regression)--17
-- [SVM](#svm)--23
-- [Evaluation](#evaluation)--23
-- [Feature Selection](#feature_selection)--41
-- [Dimension Reduction](#dimensionreduction)--45
-- [Neural Network](#neuralnetwork)--49
-- [Generative Models](#generative)--61
-- [Unsupervised Learning](#unsupervised)--66
-- [Semi-Supervised Learning](#semisupervise)--79
-- [Ensemble Learning](#ensemble)--83
-- [Anomaly Detection](#anomaly)--91
-- [Ethics and Bias](#ethics-and-bias)--100
+- [Week 1](#week1) ................................................. 1  
+- [Lifecycle](#lifecycle) ........................................... 6  
+- [K-NN](#k-nn) ...................................................... 7  
+- [Probs](#probs) ................................................... 10  
+- [Naive Bayes](#naive_bayes) ....................................... 13  
+- [Decision Tree](#decisiontree) .................................... 22  
+- [Regression](#regression) ......................................... 25  
+- [SVM](#svm) ....................................................... 31  
+- [Evaluation](#evaluation) ......................................... 32  
+- [Feature Selection](#feature_selection) ........................... 53  
+- [Dimension Reduction](#dimensionreduction) ....................... 58  
+- [Neural Network](#neuralnetwork) ................................. 63  
+- [Generative Models](#generative) ................................. 78  
+- [Unsupervised Learning](#unsupervised) ........................... 84  
+- [Semi-Supervised Learning](#semisupervise) ...................... 100  
+- [Ensemble Learning](#ensemble) .................................. 106  
+- [Anomaly Detection](#anomaly) ................................... 116  
+- [Ethics and Bias](#ethics-and-bias) .............................. 128  
 ---
 <!-- pagebreak -->
 ## week1
@@ -208,7 +208,7 @@
 
 # Machine Learning Lifecycle
 
-![Lifecycle](assets\lifecycle.png)
+![Lifecycle](assets/lifecycle.png)
 
 ### BaseLine Model
 - Zero-R (0-R)
@@ -228,7 +228,7 @@
 
 
 ### Supervised lifecycle
-![Supervised](assets\supervised_life.png)
+![Supervised](assets/supervised_life.png)
 ---
 <!-- pagebreak -->
 ## K-NN
@@ -298,7 +298,7 @@
     - also: lower classifier performance
     - what if K == N
 
-![Draw Validation error:](assets\draw_validation_error.png)
+![Draw Validation error:](assets/draw_validation_error.png)
 Take the maximum point in the graph
 
 ### Breaking Tie
@@ -340,14 +340,14 @@ Take the maximum point in the graph
 - fixed prediction rule
 - compare test instances with stored instances
 - no learning
-![Lazy Learn](assets\lazy_learn.png)
+![Lazy Learn](assets/lazy_learn.png)
 
 ### Eager Learning
 - train a model with labelled data training instances
 - generalize from seen data to unseen data
 - predict labels for test instances
 
-![Eager Learn](assets\eager_learn.png)
+![Eager Learn](assets/eager_learn.png)
 ---
 <!-- pagebreak -->
 ## Probs
@@ -367,7 +367,7 @@ P(A=a) -> $0 <= P  <= 1 $
 ### Notation
 - $P(A=x)$ indicates the likelyhood of A = x, also write as $P(x)$
 - $P(A)$ shows the probability distribution, a histogram
-![P(A)](assets\P_A.png)
+![P(A)](assets/P_A.png)
 
 ### Rules
 - independence
@@ -383,7 +383,7 @@ P(A=a) -> $0 <= P  <= 1 $
     - $P(A|B) =P(A)P(B|A)/P(B)$ derived from $P(A|B) = P(A \cap B)/P(B)$ and $P(A \cap B) = P(A|B)P(B) = P(B|A)P(A)$
 
     - Bayes rule allow us to compute P(A|B) with known of P(B|A)
-![Bayes](assets\Bayes.png)
+![Bayes](assets/Bayes.png)
 
 ### Marginalization
 - $P(A) = \sum_{b \in \mathbb{B}} P(A,B=b)$
@@ -1077,17 +1077,17 @@ shows how well the model is generalising.
 - Example One
     - More training instances → (usually) better model
     - More evaluation instances → more reliable estimate of effectiveness
-![one](assets\training_1.png)
+![one](assets/training_1.png)
 
 - Example Two compare models
     - Using the polynomial of order 𝐷 of 𝑥 to increase the flexibility of linear regression
 $𝑦 = 𝒘 ∙ 𝜙 𝑥 \\
 𝜙 𝑥 = [1, 𝑥, 𝑥2, ... , 𝑥𝐷]$
 - Massive Examples Orders of a polynomial model
-![two](assets\training_2.png)
-![two](assets\training_3.png)
-![two](assets\training_4.png)
-![two](assets\training_5.png)
+![two](assets/training_2.png)
+![two](assets/training_3.png)
+![two](assets/training_4.png)
+![two](assets/training_5.png)
 
 - Model complexity
     - The number of adjustable parameters in a model
@@ -2415,11 +2415,11 @@ K-means Clustering Algorithm
 - Centroid Method
     ![](assets/centroid_method.png)
 
-| Method             | Strength                                        | Weakness                                                       | Visual 1       | Visual 2       |
-|--------------------|-------------------------------------------------|----------------------------------------------------------------|----------------|----------------|
-| **Single Linkage**   | - Can handle non-spherical shapes               | - Very sensitive to noise and outliers                         | ![](assets/simple_strong.png)               | ![](assets/simple_weak.png)               |
-| **Complete Linkage** | - Less sensitive to noise and outliers          | - Tends to form spherical clusters and break large ones        |  ![](assets\complete_strong.png)          |   ![](assets/complete_weak.png)                |
-| **Centroid Linkage** | - Balances shape sensitivity and compactness   | - May give inconsistent merges due to drifting centroids       |               |                |
+| Method               | Strength                                     | Weakness                                                 | Visual 1                        | Visual 2                      |
+| -------------------- | -------------------------------------------- | -------------------------------------------------------- | ------------------------------- | ----------------------------- |
+| **Single Linkage**   | - Can handle non-spherical shapes            | - Very sensitive to noise and outliers                   | ![](assets/simple_strong.png)   | ![](assets/simple_weak.png)   |
+| **Complete Linkage** | - Less sensitive to noise and outliers       | - Tends to form spherical clusters and break large ones  | ![](assets/complete_strong.png) | ![](assets/complete_weak.png) |
+| **Centroid Linkage** | - Balances shape sensitivity and compactness | - May give inconsistent merges due to drifting centroids |                                 |                               |
 
 - Strength of Hierachical Clustering 
     - No assumption of any particular number of clusters
@@ -3400,10 +3400,10 @@ remove A
 ## Formal Fairness Criteria
 - [Quick recap of metrics](Evaluation.md#evaluation-metrics)
 
-|               | $\hat{y} = 1$         | $\hat{y} = 0$         |
-|---------------|-----------------------|------------------------|
-| $y = 1$       | true positive (TP)     | false negative (FN)    |
-| $y = 0$       | false positive (FP)    | true negative (TN)     |
+|         | $\hat{y} = 1$       | $\hat{y} = 0$       |
+| ------- | ------------------- | ------------------- |
+| $y = 1$ | true positive (TP)  | false negative (FN) |
+| $y = 0$ | false positive (FP) | true negative (TN)  |
 
 ### **Positive Predictive Value (PPV)** (also: precision):
 
